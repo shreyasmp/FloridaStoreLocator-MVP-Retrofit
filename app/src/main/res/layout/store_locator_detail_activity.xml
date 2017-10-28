@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_store_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="4dp"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:titleTextColor="@color/colorWhite">
+
+        </android.support.v7.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/detailed_store_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_10dp"
+            >
+
+            <ImageView
+                android:id="@+id/detail_store_logo"
+                android:layout_width="@dimen/dimen_100dp"
+                android:layout_height="@dimen/dimen_100dp"
+                android:layout_margin="@dimen/dimen_10dp"/>
+
+            <TextView
+                android:id="@+id/detail_store_contact_number"
+                android:layout_below="@+id/detail_store_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <TextView
+                android:id="@+id/detail_store_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/detail_store_logo"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:textSize="@dimen/dimen_14sp"/>
+
+            <TextView
+                android:id="@+id/detail_label_store_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_store_address"
+                android:textSize="@dimen/dimen_14sp"
+                android:layout_toEndOf="@+id/detail_store_logo"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:text="@string/store_id_label"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="@dimen/dimen_60dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                />
+
+            <TextView
+                android:id="@+id/detail_storeid"
+                android:layout_below="@+id/detail_store_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_14sp"
+                android:layout_toEndOf="@+id/detail_store_logo"
+                android:layout_alignParentEnd="true"
+                android:gravity="right"
+                android:textColor="@android:color/black"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                />
+
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/store_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</layout>

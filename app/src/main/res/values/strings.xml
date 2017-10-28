@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StoreLocator</string>
+    <string name="error_results">Error: No Stores</string>
+    <string name="address_label">Address: </string>
+    <string name="store_id_label">Store ID: </string>
+    <string name="google_maps_key">AIzaSyDlt7KCeirpH9x8buJTt4hahjUDW9WRoME</string>
+</resources>
